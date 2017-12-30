@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.dao.mapper.AppriseMapper">
+	<select id="findAll" resultMap="findAllAppriseMap">
+	<!-- 		select * from t_apprise a,t_info i,t_user u where a.infoId=i.id and a.userId=u.userId -->
+				select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id  order by a.id asc
+	</select>
+	<select id="findById" resultMap="findAllAppriseMap"
+		parameterType="java.lang.Integer">
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id where a.id=#{value} order by a.id asc
+	</select>
+	<select id="findByInfoId" resultMap="findAllAppriseMap"
+		parameterType="java.lang.Integer">
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id where a.infoId=#{value} order by a.id asc
+	</select>
+	<select id="findByUesrId" resultMap="findAllAppriseMap"
+		parameterType="java.lang.Integer">
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id  where a.userId=#{value} order by a.id asc
+	</select>
+	<select id="findByUserName" resultMap="findAllAppriseMap" parameterType="java.lang.String">
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id where u.username like '%${value}%' order by a.id asc
+	</select>
+	<select id="findByInfoTitle" resultMap="findAllAppriseMap" parameterType="java.lang.String" >
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id where i.title like '%${value}%' order by a.id asc
+	</select>
+	<select id="findByConnection" resultMap="findAllAppriseMap" parameterType="com.kevin.dao.pojo.Apprise">
+		select a.*,u.*,i.id i_id,i.title from t_apprise a inner join t_user u on a.userId=u.userId inner join t_info i on a.infoId=i.id
+		<where>
+			<if test="info != null and info.title != null and info.title !=''">
+			and i.title like concat('%',#{info.title},'%')
+			</if>
+			<if test="user != null and user.username !=null and user.username !=''">
+			and u.username like concat('%',#{user.username},'%')
+			</if>
+			<if test="appriseInfo !=null and appriseInfo !=''">
+			and a.appriseInfo like concat('%',#{appriseInfo},'%')
+			</if>
+			<if test="start_time!=null and start_time !='' and end_time!=null and end_time !=''">
+			and a.time between #{start_time} and #{end_time}
+			</if>
+			<if test="start_time!=null and start_time !='' and (end_time==null or end_time =='')">
+			and a.time <![CDATA[ >=]]> #{start_time} 
+			</if>
+			<if test="(start_time==null or start_time =='') and end_time!=null and end_time !=''">
+			and a.time <![CDATA[ <= ]]> #{end_time}
+			</if>
+			<if test="state != null and state !=''">
+			and a.state=#{state},
+			</if>
+		</where>
+		order by a.id asc
+	</select>
+	<insert id="save" parameterType="com.kevin.dao.pojo.Apprise">
+		insert into t_apprise(userId,infoId,appriseInfo,state) values(#{user.userId},#{info.id},#{appriseInfo},#{state})
+	</insert>
+	<delete id="delete" parameterType="com.kevin.dao.pojo.Apprise">
+		delete from t_apprise where id=#{id}
+	</delete>
+	<update id="update" parameterType="com.kevin.dao.pojo.Apprise">
+		update t_apprise
+		 <set>
+		 <if test="appriseInfo !=null and appriseInfo !=''">
+		  	appriseInfo=#{appriseInfo},
+		 </if>
+		 <if test="state != null and state !=''">
+			state=#{state},
+		</if>
+		 </set>
+		 <where>
+		  id=#{id} 
+		 </where>
+	</update>
+	<resultMap type="com.kevin.dao.pojo.Apprise" id="findAllAppriseMap">
+         <id property="id" column="id"/> 
+         <result property="time" column="time"/> 
+         <result property="appriseInfo" column="appriseInfo"/> 
+         <result property="state" column="state"/> 
+         <association property="user" column="userId" javaType="com.kevin.dao.pojo.User">
+             <id property="userId" column="userId"/>
+             <result property="username" column="username"/>
+             <result property="phone" column="username"/>
+             <result property="email" column="username"/>
+         </association>
+         <association property="info" column="infoId" javaType="com.kevin.dao.pojo.Info">
+             <id property="id" column="infoId"/>
+             <result property="title" column="title"/>
+         </association>
+    </resultMap>
+    	
+</mapper>

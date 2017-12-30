@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="hotcss" content="initial-dpr=1">
+    <title>alert</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/hotcss.js"></script>
+</head>
+<body>   
+<!-- 弹出框-取消订单 -->
+    <div class="alert-layer">
+        <div class="pop-modal">
+            <span class="alert-icon-tips ait-question"></span>
+            <dl>
+                <dt>是否取消订单？</dt>
+                <dd>多等1分钟，服务人员正在赶来...</dd>
+            </dl>
+            <div class="alert-btn">
+                <button>不等了</button>
+                <button class="confirm-btn">再等等</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 弹出框-追加费用 -->
+    <div class="alert-layer" style="display: none;">
+        <div class="pop-modal">
+            <span class="alert-icon-tips ait-money"></span>
+            <p class="add-money"><span></span>追加金额<input type="text">元</p>
+            <div class="alert-btn">
+                <button>取消</button>
+                <button class="confirm-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 弹出框-重复发布需求 -->
+    <div class="alert-layer" style="display: none;">
+        <div class="pop-modal">
+            <span class="alert-icon-tips ait-warning"></span>
+            <dl>
+                <dt>不可以重复发布需求</dt>
+                <dd>发单内容相同会扣除您的积分</dd>
+            </dl>
+            <div class="alert-btn">
+                <button>继续</button>
+                <button>关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框-提交成功 -->
+    <div class="alert-layer" style="display: none;">
+        <div class="pop-modal">
+            <span class="alert-icon-tips ait-sucess"></span>
+            <dl>
+                <dt>提交成功！</dt>
+                <dd>服务人员正在抢单，请耐心等待</dd>
+            </dl>
+        </div>
+    </div>
+<!-- 弹出框-密码修改 -->
+    <div class="alert-layer" style="display: none;">
+        <div class="pop-modal">
+            <span class="alert-icon-tips ait-sucess"></span>
+            <dl>
+                <dt>修改成功！</dt>
+                <dd>请使用新密码重新登录</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+ 
+</body>
+</html>

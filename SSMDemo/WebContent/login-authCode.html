@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="hotcss" content="initial-dpr=1">
+    <title>验证码登录</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/hotcss.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="logo-wrap">
+        <img class="icon-logo" src="img/icon-logo.png">
+    </div>
+    <img class="logo-wave" src="img/logo-wave.jpg">
+    <ul class="login-form">
+        <li class="input-phone"><input placeholder="请输入手机号" type="text" id="phone"><button class="send-auth J_GetCode" id='btnSendCode' onclick='sendMessage()' >发送验证码</button></li>
+        <li class="input-noicon"><input placeholder="请输入验证码" type="text" id='checkCode'></li>
+    </ul>
+    <div class="login-button">
+        <button onclick="login()">登录</button>
+        <button onclick='loginpwd()'>密码登录</button>
+        <p><a href="register.html">还没有账号？点击立刻注册></a></p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+//发送短信
+function sendMessage() {
+	var phone = $("#phone").val(); //手机号码  
+	if (phone != "") {
+		var serialize="phone="+phone +"&type=2";
+		//向后台发送处理数据  
+		$.ajax({
+        url: 'http://query.yahooapis.com/v1/public/yql',
+        dataType: 'jsonp',
+        data: {
+            q: "select * from json where url=\"http://lbs.lanbanshou.com/index.php/api/sms/sendMessage?"+serialize+"\"",
+            format: "json"
+        },
+        success: function (d) {
+           alert(d.query.results.json.msg);
+        }
+    	});
+	} else {
+		alert("手机号码不能为空！");
+	}
+}
+//验证码登录
+function login(){
+	var phone = $("#phone").val(); //手机号码  
+	var pwd=$('#pwd').val();//密码
+	var captcha=$('#checkCode').val();
+	var serialize="phone=" + phone + "&captcha=" + captcha;
+		$.ajax({
+        url: 'http://query.yahooapis.com/v1/public/yql',
+        dataType: 'jsonp',
+        data: {
+            q: "select * from json where url=\"http://lbs.lanbanshou.com/index.php/api/user/userLogin?"+serialize+"\"",
+            format: "json"
+        },
+        success: function (d) {
+        	if(d.query.results.json.code==200){
+        		//登录成功，跳转至首页
+        		window.location.href='index.html';
+        	}else{
+        		//注册失败，提示信息后重新登录
+        		alert(d.query.results.json.msg);
+        		return ;
+        	}
+        }
+    });
+}
+function loginpwd(){
+	 window.location.href="login.jsp"
+}
+</script>
+</body>
+</html>

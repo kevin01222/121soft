@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*  
+* @description: 手机登录注册页面
+* @author: huangzhixiong
+* @update:(2015-12-04)  
+*/
+
+html,body { font-family:"Microsoft Yahei"; color: #FFF;}
+input:focus { -webkit-outline: none; outline: none;}
+.box-none { border: none;}
+.b-k-n { background: none;}
+/* 设置placeholder的默认颜色 */
+input::-moz-placeholder,textarea::-moz-placeholder{color:#bfd3f6; opacity: 1;}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#bfd3f6; opacity: 1;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#bfd3f6; opacity: 1;}

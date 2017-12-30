@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="hotcss" content="initial-dpr=1">
+    <title>发布需求</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/hotcss.js"></script>
+</head>
+<body>
+<p class="head-title-white">发布需求<i class="head-return-blue"></i></p>
+<div class="classify-box">
+    <span class="J_tabClassify">骑行</span>
+    <i class="big-tringle"></i>
+    <span class="J_kindtwo">分类二<i class="classify-tringle"></i></span>
+    <i class="big-tringle"></i>
+    <span class="J_kindthree">分类二<i class="classify-tringle"></i></span>
+</div>
+<!-- 分类 -->
+<div class="kindbox" id="app2">
+    <div class="c_two">
+        <div class="demand-box classify-two"  v-for="(item,index) in itemList.data" :data-id="item.value">
+            <span v-for="(v,index2) in item.children" :data-id="index2">{{v.text}}</span> 
+        </div>
+    </div>
+    <div class="c_three">
+        <div class="c_three_item" v-for="(item,index) in itemList.data" :data-id="item.value">
+            <div class="demand-box classify-three" v-for="(v,index2) in item.children" :data-id="index2">
+                <label v-for="(s,index3) in v.children"><input type="checkbox">{{s.text}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 用户信息 -->
+<div class="demand-box person-message">
+    <ul>
+        <li class="person-name"><input type="text" value="黄志雄"></li>
+        <li class="person-tel"><input type="text" value="13641243628"></li>
+        <li class="person-address"><input type="text" value="山西省临汾市尧都区贡院街54号"><span class="per-tringle"></span></li>
+        <li class="person-time"><input type="text" value="预约时间"><span class="per-tringle"></span></li>
+    </ul>
+</div>
+<!-- 描述状况 -->
+<div class="demand-box pb_20">
+    <p class="demand-title"><span class="link-setting"></span>这里可以填写具体描述</p>
+    <div contenteditable="true" class="message-edit"></div>
+</div>
+<!-- 上传图片 -->
+<div class="demand-box pb_20" id="picupload">
+    <input @change="fileChange($event)" type="file" id="upload_file" multiple style="display: none"/>
+    <p class="demand-title"><span class="link-photo"></span>上传图片</p>
+    <div class="upload-box">
+        <span class="upload-add" @click="fileClick"></span>
+        <div class="upload_warp_img_div" v-for="(item,index) of imgList">
+            <div class="upload_warp_img_div_top">
+                <div class="upload_warp_img_div_text">
+                  {{item.file.name}}
+                </div>
+                <img src="img/del.png" class="upload_warp_img_div_del" @click="fileDel(index)">
+            </div>
+            <img :src="item.file.src">
+        </div>
+    </div>
+</div>
+<div class="login-button m0auto">
+    <button>提交需求</button>
+</div>
+<!-- 弹出框-提交成功 -->
+<div class="alert-layer" style="display: none;">
+    <div class="pop-modal">
+        <span class="alert-icon-tips ait-sucess"></span>
+        <dl>
+            <dt>提交成功！</dt>
+            <dd>服务人员正在抢单，请耐心等待</dd>
+        </dl>
+    </div>
+</div>    
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<!-- vue获取数据 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource"></script>
+<script type="text/javascript" src="js/vuepage.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!-- 上传图片 -->
+<script type="text/javascript" src="js/upload-pic.js"></script>
+</body>
+</html>

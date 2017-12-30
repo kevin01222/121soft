@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="hotcss" content="initial-dpr=1">
+    <title>待接单</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/hotcss.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <p class="head-title-white">待接单<i class="head-return-blue"></i><span>发新需求</span></p>
+    <div id="container"></div>
+    <div class="order-detail">
+        <span class="lift-detail J_toggle"></span>
+        <ul>
+            <li class="repair-style flex">
+                <span>电动车</span>
+                <i></i>
+                <span>自行车</span>
+                <i></i>
+                <span>刹车,变速器</span>
+            </li>
+            <li class="repair-linkman">联系人：<span>黄志雄，13641243628</span></li>
+            <li class="repair-pos">五洲休闲广场斜对面</li>
+            <li class="repair-detail">
+                <dl class="mb_22">
+                    <dt>详情描述</dt>
+                    <dd>轮胎没气了，我现在在平阳广场，来了打电话。</dd>                        
+                </dl>
+                <p class="repair-pic">
+                    <img src="img/lala.jpg" alt="">
+                    <img src="img/staff-head.jpg" alt="">
+                </p>
+            </li>
+            <li class="repair-cost">
+                <p>订单费用</p>
+                <dl>
+                    <dd class="flex"><span>预付</span><span>¥0.00</span></dd>
+                    <dd class="flex"><span>材料费</span><span>¥0.00</span></dd>
+                </dl>
+                <span class="notice-cost">(未支付费用需服务人员确定后支付)</span>                  
+            </li>
+        </ul>
+        <p class="repair-order flex">
+            <span>订单编号:s60010170218165337</span>
+            <span>17-12-19 14:56:04</span>
+        </p>
+    </div>
+    <div class="repair-btn flex">
+        <button>取消订单</button>
+        <button class="J_addFare">追加费用</button>
+    </div>
+</div>
+<!-- 弹出框-追加费用 -->
+<div class="alert-layer none">
+    <div class="pop-modal">
+        <span class="alert-icon-tips ait-money"></span>
+        <p class="add-money"><span></span>追加金额<input type="text">元</p>
+        <div class="alert-btn">
+            <button class="J_cancel">取消</button>
+            <button class="J_confirm confirm-btn">确定</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.2&key=08b601410cf417fe708c65ddc9f30221"></script>
+<script type="text/javascript">
+    var map = new AMap.Map('container',{
+        zoom: 16
+    });
+</script>
+</body>
+</html>

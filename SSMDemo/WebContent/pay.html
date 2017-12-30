@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="hotcss" content="initial-dpr=1">
+    <title>付款</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/hotcss.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <p class="head-title-white">付款<i class="head-return-blue"></i></p> -->
+        <p class="pay-count">需支付<span><b>15.00</b>元</span></p>
+        <p class="w-deposit">
+            <label for="integral">本次可使用100积分抵10.00元</label><input id="integral" type="checkbox">
+        </p>
+        <div class="pay-way">
+            <ul>
+                <li>
+                    <label for="pay1">
+                        <dl class="wechat">
+                            <dt>微信支付</dt>
+                            <dd>推荐安装微信5.0及以上版本的使用</dd>
+                        </dl>
+                    </label>
+                    <input id="pay1" name="acount" type="radio">
+                </li>
+                <li>
+                    <label for="pay2">
+                        <dl class="alipay">
+                            <dt>支付宝支付</dt>
+                            <dd>推荐有支付宝账户的用户使用</dd>
+                        </dl>
+                    </label>
+                    <input id="pay2" name="acount" type="radio">
+                </li>
+                <li>
+                    <label for="pay3">
+                        <dl class="account">
+                            <dt>账户支付</dt>
+                            <dd>账户余额：0.00元</dd>
+                        </dl>
+                    </label>    
+                    <input id="pay3" name="acount" type="radio">
+                </li>
+            </ul>
+        </div>
+        <div class="login-button mt1rem">
+            <button>确定</button>
+        </div>           
+    </div>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

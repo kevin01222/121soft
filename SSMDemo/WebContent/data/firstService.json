@@ -1,0 +1,26 @@
+{
+  "code": 200,
+  "msg": "请求成功",
+  "data": [
+    {
+      "service_items_id": 16,
+      "service_items_title": "电动车",
+      "service_items_img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/f954c3cbf29af2d42b8b6695afb86a7a.svg"
+    },
+    {
+      "service_items_id": 25,
+      "service_items_title": "水 暖",
+      "service_items_img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/491a2f77570741894787bd921525ce3c.svg"
+    },
+    {
+      "service_items_id": 26,
+      "service_items_title": "家居",
+      "service_items_img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/441977e31ba9882a3465d5001f173377.svg"
+    },
+    {
+      "service_items_id": 2,
+      "service_items_title": "开锁",
+      "service_items_img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171218/dcb9117bf982496be8aca0185b1395e9.svg"
+    }
+  ]
+}

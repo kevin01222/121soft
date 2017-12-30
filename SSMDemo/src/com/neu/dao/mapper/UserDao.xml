@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neu.dao.mapper.UserDao">
+
+	<!-- void save(User user) throws Exception; -->
+	<insert id="save" parameterType="com.neu.dao.pojo.User">
+		insert into
+		aa_user(username,password,regtime)
+		values(#{username},#{password},#{regtime})
+	</insert>
+
+	<!-- void delete(User user) throws Exception; -->
+	<delete id="delete" parameterType="com.neu.dao.pojo.User">
+		delete from aa_user where
+		id=#{id}
+	</delete>
+
+	<!-- void update(User user) throws Exception; -->
+	<update id="update" parameterType="com.neu.dao.pojo.User">
+		update aa_user set
+		username=#{username},password=#{password},regtime=#{regtime} where
+		id=#{id}
+	</update>
+
+	<!-- List<User> findAll() throws Exception; -->
+	<select id="findAll" resultType="com.neu.dao.pojo.User">
+		select
+		id,username,password,regtime from aa_user
+	</select>
+
+	<!-- List<User> findByName(String username) throws Exception; -->
+	<select id="findByName" parameterType="java.lang.String"
+		resultType="com.neu.dao.pojo.User">
+		select id,username,password,regtime from aa_user where
+		username like '%${value}%'
+	</select>
+
+	<!-- User findById(Integer id) throws Exception; -->
+	<select id="findById" parameterType="java.lang.Integer"
+		resultType="com.neu.dao.pojo.User">
+		select id,username,password,regtime from aa_user where
+		id=#{value}
+	</select>
+
+	<!-- User login(User user) throws Exception; -->
+	<select id="login" parameterType="com.neu.dao.pojo.User"
+		resultType="com.neu.dao.pojo.User">
+		select id,username,password,regtime from aa_user where
+		username=#{username} and password=#{password}
+	</select>
+
+</mapper>

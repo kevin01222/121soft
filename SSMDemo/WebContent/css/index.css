@@ -1,0 +1,962 @@
+@charset "UTF-8";
+/*  
+* @description: 手机登录注册页面
+* @author: huangzhixiong
+* @update:(2017-12-04)  
+*/
+.block {
+  display: flex !important; }
+
+.flex {
+  display: flex;
+  justify-content: space-between; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  overflow: hidden;
+  position: relative; }
+
+/* 登录头部 */
+.head-title, .head-title-white {
+  font-size: 0.75rem;
+  text-align: center;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  position: relative; }
+
+.head-title {
+  color: #FFF;
+  background: #078dff; }
+
+.head-title-white {
+  color: #333;
+  background: #FFF;
+  border-bottom: 0.025rem solid #CCC; }
+  .head-title-white span {
+    font-size: 0.6rem;
+    color: #078dff;
+    position: absolute;
+    right: 0.5rem;
+    top: 0; }
+
+.head-return {
+  background: url(../img/head-return.jpg) no-repeat; }
+
+.head-return-blue {
+  background: url(../img/head-return-blue.jpg) no-repeat; }
+
+.head-return, .head-return-blue {
+  width: 0.45rem;
+  height: 0.8rem;
+  background-size: 0.45rem 0.8rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.7rem; }
+
+.logo-wrap {
+  width: 100%;
+  height: 6.4rem;
+  background: #078dff;
+  overflow: hidden;
+  position: relative; }
+
+.character-wrap {
+  width: 100%;
+  height: 3.4rem;
+  background: #078dff;
+  overflow: hidden;
+  position: relative; }
+
+.logo-wrap::after {
+  content: " ";
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-left: -1.875rem;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  top: 1.8rem;
+  z-index: 2; }
+
+.icon-logo {
+  width: 2.5rem;
+  height: 2.25rem;
+  margin-left: -1.25rem;
+  z-index: 4;
+  position: absolute;
+  left: 50%;
+  top: 2.55rem; }
+
+.logo-wave {
+  height: 2.875rem;
+  background: url(../img/logo-wave.jpg) no-repeat;
+  background-size: 100% 2.875rem; }
+
+/* 输入框 */
+.login-form {
+  width: 13.5rem;
+  margin: 2rem auto 0; }
+  .login-form li {
+    border-bottom: 0.025rem solid #DDD;
+    margin-top: 0.875rem;
+    position: relative; }
+  .login-form input {
+    border: none;
+    background: none;
+    display: block;
+    color: #333;
+    width: 100%;
+    height: 1.4rem;
+    font-size: 0.65rem;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 1.8rem;
+    position: relative; }
+  .login-form li::after {
+    content: " ";
+    display: block;
+    height: 1.4rem;
+    width: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .login-form li.input-phone::after {
+    background: url(../img/input-phone.jpg) no-repeat center;
+    background-size: 0.525rem 0.775rem; }
+  .login-form li.input-lock::after {
+    background: url(../img/input-lock.jpg) no-repeat center;
+    background-size: 0.55rem 0.725rem; }
+  .login-form li.input-again::after {
+    background: url(../img/again.png) no-repeat center;
+    background-size: 0.7rem 0.725rem; }
+  .login-form li.input-shield::after {
+    background: url(../img/input-shield.jpg) no-repeat center;
+    background-size: 0.7rem 0.7rem; }
+  .login-form li.input-noicon input {
+    padding-left: 0.8rem; }
+
+.send-auth {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: #078dff;
+  font-size: 0.525rem;
+  color: #FFF;
+  position: absolute;
+  right: 0;
+  bottom: 0.3rem;
+  border-radius: 0.35rem;
+  padding: 0 0.375rem;
+  border: none; }
+
+.user-agreement {
+  font-size: 0.5rem;
+  text-align: center;
+  margin-top: 0.7rem;
+  color: #666; }
+
+/* 登录按钮 */
+.login-button {
+  width: 12.5rem;
+  margin: 2rem auto 0;
+  text-align: center; }
+
+.login-button button {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.6rem;
+  border-radius: 1rem;
+  color: #FFF;
+  border: none; }
+.login-button button:nth-child(1) {
+  background: #078dff; }
+.login-button button:nth-child(2) {
+  background: #07c8ff; }
+
+.login-button p {
+  color: #999;
+  margin-top: 0.5rem;
+  font-size: 0.55rem; }
+  .login-button p span {
+    vertical-align: 0.025rem;
+    margin: 0 0.8rem; }
+  .login-button p a {
+    color: #999; }
+
+.register-bottom {
+  margin-top: 3.4rem; }
+
+/* 弹出框 */
+.alert-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 99; }
+
+.pop-modal {
+  width: 11rem;
+  background: #FFF;
+  position: absolute;
+  border-radius: .18rem;
+  top: 50%;
+  left: 50%;
+  padding-bottom: 0.5rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 0.35rem;
+  padding-top: 1.75rem; }
+  .pop-modal dl dt {
+    font-size: 0.75rem;
+    color: #333;
+    padding-bottom: 0.5rem; }
+  .pop-modal dl dd {
+    font-size: 0.6rem;
+    color: #666;
+    padding-bottom: 1rem; }
+
+.alert-icon-tips {
+  width: 2.125rem;
+  height: 2.3rem;
+  position: absolute;
+  top: -1.2rem;
+  left: 4.425rem; }
+
+.ait-sucess {
+  background: url(../img/alert-icon-sucess.png) no-repeat;
+  background-size: 2.125rem 2.3rem; }
+
+.ait-warning {
+  background: url(../img/alert-icon-warning.png) no-repeat;
+  background-size: 2.125rem 2.3rem; }
+
+.ait-money {
+  background: url(../img/alert-icon-money.png) no-repeat;
+  background-size: 2.125rem 2.3rem; }
+
+.ait-question {
+  background: url(../img/alert-icon-question.png) no-repeat;
+  background-size: 2.125rem 2.3rem; }
+
+.alert-btn {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between; }
+  .alert-btn button {
+    width: 3.5rem;
+    height: 1.15rem;
+    border: 0.025rem solid #CCC;
+    font-size: 0.65rem;
+    color: #666;
+    background: #FFF;
+    border-radius: 0.5rem; }
+
+.add-money {
+  font-size: 0.6rem;
+  color: #333;
+  text-align: center;
+  padding: 0.7rem 0 1.375rem; }
+  .add-money span {
+    width: 0.8rem;
+    height: 0.85rem;
+    margin-right: 0.4rem;
+    background: url(../img/add-money.jpg) no-repeat;
+    background-size: 0.8rem 0.85rem;
+    display: inline-block;
+    vertical-align: -0.15rem; }
+  .add-money input {
+    width: 3.45rem;
+    text-align: center;
+    height: 1.15rem;
+    border: 0.025rem solid #CCC;
+    border-radius: 0.3rem;
+    margin: 0 0.6rem; }
+
+.alert-btn button.confirm-btn {
+  border: none;
+  color: #FFF;
+  background: #078dff; }
+
+/* 首页 头部 */
+.index-head {
+  height: 2.2rem;
+  background: #FFF;
+  border-bottom: 0.025rem solid #CCC;
+  position: relative;
+  line-height: 2rem;
+  text-align: center; }
+
+.head-icon {
+  height: 0.875rem;
+  width: 0.875rem;
+  top: 0.65rem;
+  position: absolute; }
+
+.icon-person {
+  background: url(../img/icon-person-center.png) no-repeat left center;
+  background-size: 0.75rem 0.875rem;
+  left: 0.5rem; }
+
+.icon-message {
+  background: url(../img/icon-message.png) no-repeat right center;
+  background-size: 0.875rem 0.875rem;
+  right: 0.5rem; }
+
+.head-location {
+  font-size: 0.7rem;
+  color: #666; }
+
+.head-tringle {
+  font-size: 0;
+  line-height: 0;
+  border-width: 0.2rem;
+  border-color: #666;
+  border-bottom-width: 0;
+  border-style: dashed;
+  border-top-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  vertical-align: 0.075rem;
+  margin-left: 0.15rem; }
+
+#container {
+  height: 92%;
+  position: relative;
+  z-index: 1; }
+
+.amap-icon img {
+  width: 1.25rem; }
+
+/* 底部导航 */
+.foot-nav {
+  width: 100%;
+  height: 5rem;
+  background: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 0.35rem 0.35rem 0 0;
+  border-top: 0.025rem solid #CCC;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around; }
+
+.foot-nav dl {
+  margin-top: 0.9rem; }
+  .foot-nav dl dt {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-size: 2.25rem 2.25rem;
+    margin: 0 auto 0.25rem; }
+    .foot-nav dl dt img {
+      width: 100%;
+      display: block; }
+  .foot-nav dl dd {
+    font-size: 0.6rem;
+    color: #666;
+    text-align: center; }
+
+/* 发布需求 */
+.classify-tringle {
+  font-size: 0;
+  line-height: 0;
+  border-width: 0.25rem;
+  border-color: #FFF;
+  border-bottom-width: 0;
+  border-style: dashed;
+  border-top-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  margin-left: 0.3rem; }
+
+.classify-box {
+  height: 2.2rem;
+  background: #FFF;
+  border-bottom: 0.025rem solid #CCC;
+  padding: 0 0.8rem;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.55rem; }
+  .classify-box span {
+    width: 3.5rem;
+    height: 1.2rem;
+    font-size: 0.45rem;
+    color: #FFF;
+    text-align: center;
+    background: #078dff;
+    line-height: 1.2rem;
+    border-radius: 0.35rem; }
+    .classify-box span.active {
+      background: #FFF;
+      border: 1px solid #CCC;
+      color: #333; }
+      .classify-box span.active i {
+        border-top-color: #666; }
+  .classify-box .big-tringle {
+    width: 0.75rem;
+    height: 0.65rem;
+    background: url(../img/calssify-tringle.jpg) no-repeat;
+    background-size: 0.75rem 0.65rem; }
+
+.demand-box {
+  margin: 0 0.5rem 0.55rem;
+  background: #FFF;
+  border-radius: 0.25rem; }
+
+.classify-two {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  display: none; }
+  .classify-two span {
+    font-size: 0.55rem;
+    color: #333;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    flex: 0 0 50%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0.025rem; }
+    .classify-two span.active {
+      background: #078dff;
+      color: #FFF; }
+  .classify-two span::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0.025rem;
+    right: 0;
+    bottom: -1px;
+    background: #e9e9e9; }
+  .classify-two span::after {
+    content: " ";
+    position: absolute;
+    width: 0.025rem;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background: #e9e9e9; }
+  .classify-two span:nth-child(even)::after {
+    content: " ";
+    position: absolute;
+    width: 0.025rem;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background: #FFF; }
+
+.c_three_item {
+  display: none; }
+
+.classify-three {
+  width: 100%;
+  display: -webkit-flex;
+  display: none;
+  flex-wrap: wrap;
+  overflow: hidden; }
+  .classify-three label {
+    font-size: 0.55rem;
+    color: #333;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    flex: 0 0 33.33%;
+    text-align: left;
+    padding-left: 1rem;
+    position: relative;
+    border-bottom: 0.025rem solid #ddd; }
+    .classify-three label input {
+      display: inline-block;
+      vertical-align: -0.1rem;
+      margin-right: 0.5rem; }
+
+.person-message ul {
+  width: 100%; }
+.person-message li {
+  width: 100%;
+  border-bottom: 0.025rem solid #c0c0c0;
+  position: relative; }
+.person-message li:last-child {
+  border-bottom: none; }
+.person-message input[type="text"] {
+  padding-left: 1.5rem;
+  font-size: 0.55rem;
+  color: #333;
+  width: 100%;
+  height: 2.2rem;
+  border: none;
+  background: none;
+  -webkit-appearance: none; }
+.person-message li::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  width: 0.625rem;
+  height: 0.625rem; }
+.person-message li.person-name::before {
+  background: url(../img/icon-linkman.jpg) no-repeat;
+  background-size: 0.625rem 0.625rem; }
+.person-message li.person-tel::before {
+  background: url(../img/icon-linkphone.jpg) no-repeat;
+  background-size: 0.625rem 0.625rem; }
+.person-message li.person-address::before {
+  background: url(../img/icon-linkpos.jpg) no-repeat;
+  background-size: 0.625rem 0.625rem; }
+.person-message li.person-time::before {
+  background: url(../img/icon-linktime.jpg) no-repeat;
+  background-size: 0.625rem 0.625rem; }
+.person-message .per-tringle {
+  width: 0.35rem;
+  height: 0.5rem;
+  position: absolute;
+  right: 0.6rem;
+  top: 0.85rem;
+  background: url(../img/demand-tringle.jpg) no-repeat;
+  background-size: 0.35rem 0.5rem; }
+
+.demand-title {
+  height: 1.65rem;
+  line-height: 1.65rem;
+  font-size: 0.55rem;
+  color: #333;
+  position: relative;
+  padding-left: 1.5rem; }
+  .demand-title span {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 0.625rem;
+    height: 0.625rem; }
+  .demand-title span.link-setting {
+    background: url(../img/icon-linksetting.jpg) no-repeat;
+    background-size: 0.625rem 0.625rem; }
+  .demand-title span.link-reason {
+    background: url(../img/icon-linkreason.jpg) no-repeat;
+    background-size: 0.625rem 0.625rem; }
+  .demand-title span.link-photo {
+    background: url(../img/icon-linkphoto.jpg) no-repeat;
+    background-size: 0.625rem 0.625rem; }
+
+.message-edit {
+  background: #f5f5f5;
+  margin: 0 0.5rem;
+  text-indent: 1.1rem;
+  padding: 0.5rem;
+  font-size: 0.55rem;
+  color: #333;
+  border: none;
+  height: 3.25rem;
+  resize: none; }
+
+.upload-box {
+  margin: 0 0.25rem;
+  display: flex;
+  flex-wrap: wrap; }
+
+.upload-add {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: block;
+  background: url(../img/uploading-photo.jpg) no-repeat;
+  background-size: 2.2rem 2.2rem;
+  margin: 0 0.25rem 0.25rem; }
+
+/* 支付页面 */
+.pay-count {
+  height: 4.55rem;
+  background: #FFF;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #666;
+  line-height: 4.5rem;
+  border-bottom: 0.025rem solid #CCC; }
+  .pay-count span {
+    color: #078dff;
+    margin-left: 1.2rem; }
+    .pay-count span b {
+      font-size: 1.15rem;
+      margin-right: 0.5rem; }
+
+.w-deposit {
+  height: 2.95rem;
+  background: #FFF;
+  border-bottom: 0.025rem solid #CCC;
+  padding: 0 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .w-deposit label {
+    font-size: 0.6rem;
+    color: #666; }
+
+.pay-way {
+  padding: 0 1.125rem; }
+  .pay-way ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.75rem; }
+    .pay-way ul li dl {
+      height: 2rem;
+      padding-left: 2.8rem;
+      position: relative; }
+      .pay-way ul li dl::before {
+        content: " ";
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .pay-way ul li dl.wechat::before {
+        background: url(../img/icon-wechat.jpg) no-repeat;
+        background-size: 2rem 2rem; }
+      .pay-way ul li dl.alipay::before {
+        background: url(../img/icon-alipay.jpg) no-repeat;
+        background-size: 2rem 2rem; }
+      .pay-way ul li dl.account::before {
+        background: url(../img/icon-account.jpg) no-repeat;
+        background-size: 2rem 2rem; }
+      .pay-way ul li dl dt {
+        font-size: 0.65rem;
+        line-height: 1.25rem;
+        color: #333; }
+      .pay-way ul li dl dd {
+        font-size: 0.55rem;
+        color: #999; }
+
+/* 服务人员详情 */
+.service-staff {
+  text-align: center; }
+  .service-staff .staff-list {
+    text-align: center; }
+  .service-staff .staff-head {
+    padding: 0.6rem 0; }
+    .service-staff .staff-head img {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+      margin: 0 auto; }
+  .service-staff .staff-name {
+    font-size: 0.6rem;
+    color: #333; }
+  .service-staff .staff-jobNumber {
+    font-size: 0.5rem;
+    color: #078dff; }
+  .service-staff .staff-grade {
+    line-height: 1.5rem;
+    height: 2rem; }
+    .service-staff .staff-grade span {
+      width: 0.575rem;
+      height: 0.525rem;
+      margin: 0 0.15rem;
+      background: url(../img/star-gray.jpg) no-repeat;
+      background-size: 0.575rem 0.525rem;
+      display: inline-block; }
+      .service-staff .staff-grade span.active {
+        background: url(../img/star-red.jpg) no-repeat;
+        background-size: 0.575rem 0.525rem; }
+  .service-staff .staff-call {
+    line-height: 0; }
+    .service-staff .staff-call span {
+      width: 2rem;
+      height: 2rem;
+      background: url(../img/icon-call.jpg) no-repeat;
+      background-size: 2rem 2rem;
+      display: inline-block; }
+
+.grade-box {
+  display: flex;
+  padding: 0 1.75rem;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-left: none;
+  height: 3.1rem;
+  align-items: center; }
+  .grade-box dl {
+    text-align: center; }
+    .grade-box dl dt {
+      font-size: 0.6rem;
+      color: #333;
+      margin-bottom: 0.1rem; }
+      .grade-box dl dt span {
+        width: 0.65rem;
+        height: 0.65rem;
+        display: inline-block;
+        margin-right: 0.25rem;
+        vertical-align: -0.075rem; }
+        .grade-box dl dt span.good-comment {
+          background: url(../img/good-comment.jpg) no-repeat;
+          background-size: 0.65rem 0.65rem; }
+        .grade-box dl dt span.mid-comment {
+          background: url(../img/middle-comment.jpg) no-repeat;
+          background-size: 0.65rem 0.65rem; }
+        .grade-box dl dt span.bad-comment {
+          background: url(../img/bad-comment.jpg) no-repeat;
+          background-size: 0.65rem 0.65rem; }
+    .grade-box dl dd {
+      font-size: 0.5rem;
+      color: #999; }
+
+.service-list {
+  font-size: 0.6rem;
+  color: #666;
+  display: inline-block;
+  text-align: left;
+  padding-top: 1.25rem; }
+  .service-list li {
+    height: 1.625rem;
+    padding-left: 1.05rem;
+    position: relative; }
+    .service-list li::before {
+      content: " ";
+      width: 0.75rem;
+      height: 0.75rem;
+      position: absolute;
+      left: 0; }
+    .service-list li.service-company::before {
+      background: url(../img/staff-detail-company.jpg) no-repeat;
+      background-size: 0.75rem 0.75rem; }
+    .service-list li.service-time::before {
+      background: url(../img/staff-detail-worktime.jpg) no-repeat;
+      background-size: 0.75rem 0.75rem; }
+    .service-list li.service-count::before {
+      background: url(../img/staff-detail-order.jpg) no-repeat;
+      background-size: 0.75rem 0.75rem; }
+    .service-list li.service-classify::before {
+      background: url(../img/staff-detail-classify.jpg) no-repeat;
+      background-size: 0.75rem 0.75rem; }
+
+/* 投诉 */
+.complaint-box ul li {
+  width: 100%;
+  border-bottom: 0.025rem solid #c0c0c0;
+  position: relative; }
+  .complaint-box ul li label {
+    font-size: 0.55rem;
+    display: block;
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 0.5rem;
+    line-height: 2.2rem; }
+    .complaint-box ul li label input {
+      vertical-align: -0.05rem;
+      margin-right: 0.5rem; }
+.complaint-box ul li:last-child {
+  border-bottom: none; }
+
+/* 待接单 */
+.order-detail {
+  background: #FFF;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding-top: 0.75rem;
+  position: absolute;
+  width: 100%;
+  bottom: -11.25rem;
+  left: 0;
+  z-index: 2;
+  transition: bottom 500ms; }
+  .order-detail ul {
+    border-bottom: 0.025rem solid #CCC;
+    padding: 0.5rem 0.5rem 0 1.6rem; }
+    .order-detail ul li {
+      margin-bottom: 0.4rem;
+      position: relative; }
+      .order-detail ul li::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: -1.1rem;
+        top: 0.225rem;
+        width: 0.625rem;
+        height: 0.625rem; }
+    .order-detail ul .repair-style {
+      align-items: center; }
+      .order-detail ul .repair-style::before {
+        background: url(../img/icon-linksetting.jpg) no-repeat;
+        background-size: 0.625rem 0.625rem; }
+      .order-detail ul .repair-style span {
+        width: 3.4rem;
+        height: 1.1rem;
+        text-align: center;
+        line-height: 1.1rem;
+        border-radius: 0.3rem;
+        border: 0.025rem solid #078dff;
+        font-size: 0.55rem;
+        color: #666; }
+      .order-detail ul .repair-style i {
+        width: 0.75rem;
+        height: 0.65rem;
+        background: url(../img/calssify-tringle.jpg) no-repeat;
+        background-size: 0.75rem 0.65rem; }
+    .order-detail ul .repair-pos, .order-detail ul .repair-linkman, .order-detail ul .repair-detail dl dt, .order-detail ul .repair-cost p {
+      font-size: 0.6rem;
+      color: #666;
+      line-height: 1.1rem; }
+    .order-detail ul .repair-pos::before {
+      background: url(../img/icon-linkpos.jpg) no-repeat;
+      background-size: 0.625rem 0.625rem; }
+    .order-detail ul .repair-linkman span {
+      color: #333;
+      font-size: 0.55rem; }
+    .order-detail ul .repair-linkman::before {
+      background: url(../img/icon-linkman.jpg) no-repeat;
+      background-size: 0.625rem 0.625rem; }
+    .order-detail ul .repair-detail::before {
+      background: url(../img/repair-detail.png) no-repeat;
+      background-size: 0.625rem 0.625rem; }
+    .order-detail ul .repair-detail dl dt {
+      margin-bottom: 0.3rem; }
+    .order-detail ul .repair-detail dl dd {
+      font-size: 0.55rem;
+      color: #333; }
+    .order-detail ul .repair-pic {
+      display: flex; }
+      .order-detail ul .repair-pic img {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-right: 0.5rem; }
+    .order-detail ul .repair-cost p {
+      padding-bottom: 0.3rem; }
+    .order-detail ul .repair-cost::before {
+      background: url(../img/icon-linkcost.svg) no-repeat;
+      background-size: 100% 100%; }
+    .order-detail ul .repair-cost dl dd {
+      font-size: 0.55rem;
+      padding-bottom: 0.35rem; }
+      .order-detail ul .repair-cost dl dd span:nth-child(1) {
+        color: #333; }
+      .order-detail ul .repair-cost dl dd span:nth-child(2) {
+        color: #078dff; }
+    .order-detail ul .repair-cost .notice-cost {
+      display: block;
+      font-size: 0.55rem;
+      color: #078dff; }
+  .order-detail .repair-order {
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    line-height: 1.75rem;
+    font-size: 0.55rem;
+    color: #666; }
+
+.order-detail.active {
+  bottom: 2.45rem; }
+
+.repair-btn {
+  width: 100%;
+  padding: 0 1.6rem;
+  height: 2.45rem;
+  align-items: center;
+  border-top: 0.025rem solid #CCC;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  background: #FFF; }
+  .repair-btn button {
+    height: 1.15rem;
+    font-size: 0.6rem;
+    color: #666;
+    border-radius: 0.5rem;
+    padding: 0 0.75rem; }
+  .repair-btn button:nth-child(1) {
+    border: 0.025rem solid #CCC;
+    background: #FFF; }
+  .repair-btn button:nth-child(2) {
+    border: 0.025rem solid #078dff;
+    color: #FFF;
+    background: #078dff; }
+
+.lift-detail {
+  width: 2.2rem;
+  height: 0.9rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  top: -0.45rem;
+  left: 50%;
+  margin-left: -1.1rem;
+  background: #FFF url(../img/up.jpg) no-repeat center center/0.4rem 0.375rem; }
+
+.lift-detail.down {
+  background: #FFF url(../img/down.jpg) no-repeat center center/0.4rem 0.375rem; }
+
+/* 地图设置 */
+.amap-ui-mobi-city-picker, .amap-ui-mobi-city-picker .search-box, .amap-ui-mobi-city-picker .top_group .citylist .item, .listgroup .title {
+  font-size: 0.6rem !important; }
+
+.amap-ui-mobi-city-picker .topbar {
+  height: auto !important; }
+
+/* 上传图片 */
+.upload_warp_img_div_del {
+  position: absolute;
+  top: 0.15rem;
+  width: 0.4rem;
+  right: 0.1rem; }
+
+.upload_warp_img_div_top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 0.75rem;
+  text-align: left;
+  color: #fff;
+  font-size: 0.3rem;
+  text-indent: 0.1rem; }
+
+.upload_warp_img_div_text {
+  white-space: nowrap;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.upload_warp_img_div img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.upload_warp_img_div {
+  position: relative;
+  height: 2.2rem;
+  width: 2.2rem;
+  border: 0.025rem solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  margin: 0 0.25rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.upload_warp_img {
+  display: flex;
+  flex-wrap: wrap; }
+
+.m0auto {
+  margin: 0 auto; }
+
+.mt1rem {
+  margin-top: 1rem; }
+
+.pb_20 {
+  padding-bottom: 0.5rem; }
+
+.mb_22 {
+  margin-bottom: 0.55rem; }
+
+.none {
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */

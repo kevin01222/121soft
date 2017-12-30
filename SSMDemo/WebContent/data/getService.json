@@ -1,0 +1,555 @@
+{
+  "code": 200,
+  "msg": "请求成功",
+  "data": [
+    {
+      "value": 26,
+      "text": "家居",
+      "pid": 0,
+      "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/441977e31ba9882a3465d5001f173377.svg",
+      "children": [
+        {
+          "value": 67,
+          "text": "清洁",
+          "pid": 26,
+          "img": null,
+          "children": [
+            {
+              "value": 71,
+              "text": "擦玻璃",
+              "pid": 67,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 72,
+              "text": "清洗油烟机",
+              "pid": 67,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 73,
+              "text": "房间打扫",
+              "pid": 67,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 74,
+              "text": "整理",
+              "pid": 67,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 75,
+              "text": "其它",
+              "pid": 67,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 66,
+          "text": "维修",
+          "pid": 26,
+          "img": null,
+          "children": [
+            {
+              "value": 68,
+              "text": "门窗",
+              "pid": 66,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 69,
+              "text": "家具损坏",
+              "pid": 66,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 70,
+              "text": "换窗纱",
+              "pid": 66,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 84,
+              "text": "换玻璃",
+              "pid": 66,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 85,
+              "text": "其它",
+              "pid": 66,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 86,
+          "text": "保养",
+          "pid": 26,
+          "img": null,
+          "children": [
+            {
+              "value": 87,
+              "text": "家具保养",
+              "pid": 86,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 89,
+              "text": "皮具护理",
+              "pid": 86,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 88,
+              "text": "地板打蜡",
+              "pid": 86,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 90,
+              "text": "其它",
+              "pid": 86,
+              "img": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": 16,
+      "text": "电动车",
+      "pid": 0,
+      "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/f954c3cbf29af2d42b8b6695afb86a7a.svg",
+      "children": [
+        {
+          "value": 28,
+          "text": "自行车",
+          "pid": 16,
+          "img": null,
+          "children": [
+            {
+              "value": 29,
+              "text": "轮胎",
+              "pid": 28,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 30,
+              "text": "刹车",
+              "pid": 28,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 31,
+              "text": "链条",
+              "pid": 28,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 32,
+              "text": "变速器",
+              "pid": 28,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 34,
+              "text": "其它",
+              "pid": 28,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 27,
+          "text": "摩托车",
+          "pid": 16,
+          "img": null,
+          "children": [
+            {
+              "value": 42,
+              "text": "轮胎",
+              "pid": 27,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 43,
+              "text": "电路",
+              "pid": 27,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 44,
+              "text": "油路",
+              "pid": 27,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 45,
+              "text": "刹车",
+              "pid": 27,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 46,
+              "text": "发动机",
+              "pid": 27,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 47,
+              "text": "其它",
+              "pid": 27,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 1,
+          "text": "电动车",
+          "pid": 16,
+          "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20170911/70e9533e102971452880185f54982ad0.png",
+          "children": [
+            {
+              "value": 5,
+              "text": "轮胎",
+              "pid": 1,
+              "img": "http://lbs.hxcsjt.com",
+              "children": []
+            },
+            {
+              "value": 38,
+              "text": "电路",
+              "pid": 1,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 39,
+              "text": "刹车",
+              "pid": 1,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 41,
+              "text": "其它",
+              "pid": 1,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 17,
+          "text": "三轮车",
+          "pid": 16,
+          "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20170911/32a7b955ca25de60052fb4fa8f490a20.png",
+          "children": [
+            {
+              "value": 18,
+              "text": "轮胎",
+              "pid": 17,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 22,
+              "text": "电路",
+              "pid": 17,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 35,
+              "text": "刹车",
+              "pid": 17,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 37,
+              "text": "其它",
+              "pid": 17,
+              "img": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": 25,
+      "text": "水 暖",
+      "pid": 0,
+      "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171127/491a2f77570741894787bd921525ce3c.svg",
+      "children": [
+        {
+          "value": 48,
+          "text": "管道",
+          "pid": 25,
+          "img": null,
+          "children": [
+            {
+              "value": 51,
+              "text": "水管破裂",
+              "pid": 48,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 52,
+              "text": "阀门损坏",
+              "pid": 48,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 53,
+              "text": "安装",
+              "pid": 48,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 54,
+              "text": "热水器",
+              "pid": 48,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 78,
+              "text": "打眼",
+              "pid": 48,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 55,
+              "text": "其它",
+              "pid": 48,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 49,
+          "text": "暖气",
+          "pid": 25,
+          "img": null,
+          "children": [
+            {
+              "value": 56,
+              "text": "管道清洗",
+              "pid": 49,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 57,
+              "text": "漏水",
+              "pid": 49,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 58,
+              "text": "安装",
+              "pid": 49,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 60,
+              "text": "其它",
+              "pid": 49,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 77,
+          "text": "热水器",
+          "pid": 25,
+          "img": null,
+          "children": [
+            {
+              "value": 79,
+              "text": "清洗",
+              "pid": 77,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 80,
+              "text": "漏水",
+              "pid": 77,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 81,
+              "text": "安装",
+              "pid": 77,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 82,
+              "text": "不加热",
+              "pid": 77,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 83,
+              "text": "其它",
+              "pid": 77,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 50,
+          "text": "疏通",
+          "pid": 25,
+          "img": null,
+          "children": [
+            {
+              "value": 61,
+              "text": "下水道",
+              "pid": 50,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 62,
+              "text": "卫生间",
+              "pid": 50,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 63,
+              "text": "厨房",
+              "pid": 50,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 65,
+              "text": "其它",
+              "pid": 50,
+              "img": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": 2,
+      "text": "开锁",
+      "pid": 0,
+      "img": "http://lbs.hxcsjt.com/data/upload/serviceIcon/20171218/dcb9117bf982496be8aca0185b1395e9.svg",
+      "children": [
+        {
+          "value": 92,
+          "text": "开锁",
+          "pid": 2,
+          "img": null,
+          "children": [
+            {
+              "value": 93,
+              "text": "防盗门",
+              "pid": 92,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 94,
+              "text": "汽车门",
+              "pid": 92,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 95,
+              "text": "保险柜",
+              "pid": 92,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 96,
+              "text": "其它",
+              "pid": 92,
+              "img": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": 6,
+          "text": "换锁",
+          "pid": 2,
+          "img": "http://lbs.hxcsjt.com",
+          "children": [
+            {
+              "value": 97,
+              "text": "换锁芯",
+              "pid": 6,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 98,
+              "text": "安装指纹锁",
+              "pid": 6,
+              "img": null,
+              "children": []
+            },
+            {
+              "value": 99,
+              "text": "其它",
+              "pid": 6,
+              "img": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
