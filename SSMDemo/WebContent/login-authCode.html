@@ -38,16 +38,17 @@ function sendMessage() {
 	if (phone != "") {
 		var serialize="phone="+phone +"&type=2";
 		//向后台发送处理数据  
-		$.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql',
-        dataType: 'jsonp',
-        data: {
-            q: "select * from json where url=\"http://lbs.lanbanshou.com/index.php/api/sms/sendMessage?"+serialize+"\"",
-            format: "json"
-        },
-        success: function (d) {
-           alert(d.query.results.json.msg);
-        }
+       $.ajax({
+	        url: '/SSMDemo/serverService/sendMessage',
+	        dataType: 'json',
+	        data: serialize,
+	        success: function (d) {
+	            if(d.code==200){
+	            	alert(d.msg);
+	            }else{
+	                alert(d.msg);
+	            }
+	        }
     	});
 	} else {
 		alert("手机号码不能为空！");
@@ -59,27 +60,24 @@ function login(){
 	var pwd=$('#pwd').val();//密码
 	var captcha=$('#checkCode').val();
 	var serialize="phone=" + phone + "&captcha=" + captcha;
-		$.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql',
-        dataType: 'jsonp',
-        data: {
-            q: "select * from json where url=\"http://lbs.lanbanshou.com/index.php/api/user/userLogin?"+serialize+"\"",
-            format: "json"
-        },
-        success: function (d) {
-        	if(d.query.results.json.code==200){
-        		//登录成功，跳转至首页
-        		window.location.href='index.html';
-        	}else{
-        		//注册失败，提示信息后重新登录
-        		alert(d.query.results.json.msg);
-        		return ;
-        	}
-        }
-    });
+	 $.ajax({
+	        url: '/SSMDemo/serverService/userLogin',
+	        dataType: 'json',
+	        data: serialize,
+	        success: function (d) {
+	            if(d.code==200){
+	                //登录成功，跳转至首页
+	                window.location.href='index.html';
+	            }else{
+	                //登录失败提示信息，重新填写登录信息
+	                alert(d.msg);
+	                return ;
+	            }
+	        }
+	    });
 }
 function loginpwd(){
-	 window.location.href="login.jsp"
+	 window.location.href="login.html"
 }
 </script>
 </body>
